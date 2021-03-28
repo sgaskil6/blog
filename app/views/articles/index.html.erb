@@ -1,0 +1,16 @@
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      # link_to renders a link with its 1st arg as the link's text and its 2nd arg as the
+      # link's destination. If we pass a model object as the 2nd arg, link_to will call the
+      # appropriate path helper to convert the object to a path
+      <%= link_to article.title, article %>">
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Article", new_article_path %>
+
